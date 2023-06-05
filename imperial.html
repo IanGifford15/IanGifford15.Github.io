@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html><link rel="stylesheet" href="/imperial.css">
+<h1> Imperial to Metric system </h1>
+<body style="background-color:#56baed;"></body>
+</html>
+<div id="main">
+  <button class="openbtn" onclick="openNav()" style="text-align: left;">&#9776; Go Back</button>
+   </div>
+  <body style="background-color:#56baed;"></body>
+  
+  
+  <div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="index.html">* Home</a>
+    <a href="imperial.html">* Metric Into Imperial</a>
+    <a href="metric.html">* Imperial Into Metric</a>
+    <a href="why.html">* why</a>
+  
+  </div>
+  
+  
+  <script>/* Set the width of the sidebar to 250px and the left margin of the page content to 250px */
+    function openNav() {
+      document.getElementById("mySidebar").style.width = "250px";
+      document.getElementById("main").style.marginLeft = "250px";
+    }
+    
+    /* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
+    function closeNav() {
+      document.getElementById("mySidebar").style.width = "0";
+      document.getElementById("main").style.marginLeft = "0";
+    }</script>
+  
+
+
+
+
+<div class="container">
+
+
+    <div>
+        <label>Fahrenheit:</label>
+        <input type="number" id="fahrenheitInput" onchange="convertTemperature()">
+        <span id="celsiusOutput"></span>
+    </div>
+
+    <div>
+        <label>Gallons:</label>
+        <input type="number" id="gallonsInput" onchange="convertVolume()">
+        <span id="litersOutput"></span>
+    </div>
+
+    <div>
+        <label>Pounds:</label>
+        <input type="number" id="poundsInput" onchange="convertWeight()">
+        <span id="kilogramsOutput"></span>
+    </div>
+
+    <div>
+        <label>Ounces:</label>
+        <input type="number" id="ouncesInput" onchange="convertWeight()">
+        <span id="gramsOutput"></span>
+    </div>
+
+    <div>
+        <label>Inches:</label>
+        <input type="number" id="inchesInput" onchange="convertLength()">
+        <span id="centimetersOutput"></span>
+    </div>
+
+    <div>
+        <label>Yards:</label>
+        <input type="number" id="yardsInput" onchange="convertLength()">
+        <span id="metersOutput"></span>
+    </div>
+
+    <div>
+        <label>Miles:</label>
+        <input type="number" id="milesInput" onchange="convertLength()">
+        <span id="kilometersOutput"></span>
+    </div>
+
+    <div>
+        <label>Miles per Hour:</label>
+        <input type="number" id="mphInput" onchange="convertSpeed()">
+        <span id="kphOutput"></span>
+    </div>
+    </div>
+
+ <script>function convertTemperature() {
+  var fahrenheit = document.getElementById("fahrenheitInput").value;
+  var celsius = (fahrenheit - 32) * 5 / 9;
+  document.getElementById("celsiusOutput").textContent = celsius.toFixed(2) + " °C";
+}
+
+function convertVolume() {
+  var gallons = document.getElementById("gallonsInput").value;
+  var liters = gallons * 3.78541;
+  document.getElementById("litersOutput").textContent = liters.toFixed(2) + " L";
+}
+
+function convertWeight() {
+  var pounds = document.getElementById("poundsInput").value;
+  var kilograms = pounds * 0.453592;
+  document.getElementById("kilogramsOutput").textContent = kilograms.toFixed(2) + " kg";
+
+  var ounces = document.getElementById("ouncesInput").value;
+  var grams = ounces * 28.3495;
+  document.getElementById("gramsOutput").textContent = grams.toFixed(2) + " g";
+}
+
+function convertLength() {
+  var inches = document.getElementById("inchesInput").value;
+  var centimeters = inches * 2.54;
+  document.getElementById("centimetersOutput").textContent = centimeters.toFixed(2) + " cm";
+
+  var yards = document.getElementById("yardsInput").value;
+  var meters = yards * 0.9144;
+  document.getElementById("metersOutput").textContent = meters.toFixed(2) + " m";
+
+  var miles = document.getElementById("milesInput").value;
+  var kilometers = miles * 1.60934;
+  document.getElementById("kilometersOutput").textContent = kilometers.toFixed(2) + " km";
+}
+
+function convertSpeed() {
+  var mph = document.getElementById("mphInput").value;
+  var kph = mph * 1.60934;
+  document.getElementById("kphOutput").textContent = kph.toFixed(2) + " km/h";
+}
+</script>
+
+
+  
+
+
+<footer>
+  <p>Author: Ian Gifford<br>
+    <a href=8121101@RochesterSchools.org" target="_top">
+     Get in contact</a>
+</footer>
